@@ -12,6 +12,11 @@
     --preto: #000;
 }
 
+body, h1, h2, h3, p, a, img, figure, nav ul{
+    margin: 0;
+    padding: 0;
+
+}
 html {
     font-size: 16px;
 }
@@ -30,3 +35,4 @@ header {
 h1 img {
     width: 20%;
 }
+
