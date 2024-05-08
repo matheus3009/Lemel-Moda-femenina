@@ -28,21 +28,22 @@ header {
     top: 0;
     position: sticky;
     z-index: 100;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-
-
 }
 
 h1 img {
-    width: 20%;
+    width: 100% 
+
 }
+
 
 .links-menu{
     list-style: none;
     display: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    
 }
 
