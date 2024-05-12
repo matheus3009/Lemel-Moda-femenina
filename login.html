@@ -5,9 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
+    <style>
+		* { box-sizing: border-box;}
+
+		* {
+    box-sizing: border-box;
+}
+
+ h2, h3,h4, main {
+    text-align: center;
+    align-items: center;
+}
+
+html{
+    border: n;
+}
+
+
+
+header {
+    width: 100%;
+    height: 100%;
+    background-color: #bf8869;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0%;
+
+}
+
+
+
+
+h1 {
+    width: 99%;
+    text-align: center;
+    left: 0;
+}
+
+.com {
+        
+        color: black;
+        font-weight: bold;
+        display: inline-block;/*tranforma em inline e block*/
+        width: 50%;
+        padding: 1%;
+        /*  transition: 2s; aplica o efeito na saida e na volta*/
+
+    
+    
+        /* padding-block: 5%; espaço de dentro do fundo */
+    
+        border: solid 1px;
+    
+        /*alternativa antiga ao padding-block
+        box-sizing: border-box; */
+    
+}
+
+	.caixa {
+        width: 50%;
+
+		
+            
+			
+		} 
+
+		#exemplo-flaxbox{
+            margin-top: 0%;
+			background-color: #26120B;
+			display: flex;
+            flex-wrap: wrap;
+            border: none;
+            color: white;
+        
+            
+
+/*justify-content
+Em direção padrão "row", se comporta como alinhamento horizontal
+
+Se estiver na direção column, 
+se comporta como alinhamento vertical*/
+
+ 			justify-content: space-evenly; 
+
+/*alieng-itens funciona de forma contréria. ou seja, em modo "row alinha verticamente.
+em modo "column", alinha horizontalmente*/
+
+			align-items: center;
+
+		 } 
+
+         footer {
+            margin: 0%;
+            padding: 0%;
+            border: none;
+/* Fixar o footer na posição */
+     /* Posicionar na parte inferior da tela */
+     /* Ocupar toda a largura da tela */
+    /* Garantir que o footer esteja acima de outros elementos */
+            left: 0%;
+            
+}
+
+/*         footer {
+            background-color:aquamarine;
+    color: var(--cor-clara);
+    height: 30vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    /*alinhar na horizontal*/
+/*     align-items: center;
+    text-align: center;
+        } */ 
+	</style>
 </head>
 <body>
-
     <header>
         <h2><a href="">Menu &equiv;</a></h2>
         <h1>Lemel</h1>
@@ -22,26 +137,37 @@
         </div>
         <h4>ou</h4>
         <h3>Entre com</h3>
-        <p>Entra com Facebook</p>
-        <p>Entra com Google</p>
+        <p class="com">Entra com Facebook</p>
+        <p class="com">Entra com Google</p>
     </main>
-    <footer>
-        <div >
-        <h2>Contato</h2>
+
+	<footer>
+<div id="exemplo-flaxbox">
+	<div class="caixa">
+		<h2>Contato</h2>
         <ul>
             <li>Atentimento</li>
             <li>Onde encontrar</li>
             <li>Chat Online</li>
             <li>SEE ON MAP</li>
         </ul>
-        <h2>Siga</h2>
+	</div>
+
+
+
+	<div class="caixa">
+		<h2>Siga</h2>
         <ul>
             <li><a href="https://www.instagram.com/lemelmodaeacessorios?igsh=MTlzemhvcGx2cGM3Zw==">@lemelmodaeacessorios</a></li>
             <li>SEE ON MAP</li>
-        </ul>
-        <div>
-        <h2>FAQ</h2>
-        <ul>
+	</div>
+
+
+
+	<div class="caixa">
+		<img src="imagens/mini-microsoft.jpg" alt="">
+		<h2>FAQ</h2>
+		<ul>
             <li>Frete & entrega</li>
             <li>Garantia</li>
             <li>Forma de pagamento</li>
@@ -49,18 +175,20 @@
             <li>Segurança</li>
             <li>Termos & condições</li>
         </ul>
-        </div>
+	</div>
 
-    <div>
-        <h2>Minha conta</h2>
+    <div class="caixa">
+		<h2>Minha conta</h2>
         <ul>
             <li>Meus dados</li>
             <li>Meus pedidos</li>
             <li>Minhas trocas</li>
             <li>Vale compras</li>
         </ul>
-    </div>
-    </footer>
-    
+	</div>
+
+</div>
+</footer>
+
 </body>
 </html>
