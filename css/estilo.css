@@ -24,7 +24,7 @@ body {
 
 header {
     
-    background-color: var(--vermelho);
+    background-color: var(--bege);
     top: 0;
     position: sticky;
     z-index: 100;
