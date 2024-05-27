@@ -6,266 +6,96 @@
     <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
     <style>
-		* { box-sizing: border-box;}
-
-		* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
- h2, h3,h4, main {
-    text-align: center;
-    align-items: center;
-}
-
-html{
-    border: n;
-}
-
-
-
-header {
-    width: 100%;
-    height: 100%;
-    background-color: #bf8869;
-    height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0%;
-
-}
-
-
-
-
-h1 {
-    width: 99%;
-    text-align: center;
-    left: 0;
-}
-
-main{
-    margin-top: 10%;
-    margin-bottom: 20%;
-}
-
-.com {
-        
-        color: black;
-        font-weight: bold;
-        display: inline-block;/*tranforma em inline e block*/
-        width: 50%;
-        padding: 1%;
-        /*  transition: 2s; aplica o efeito na saida e na volta*/
-
-    
-    
-        /* padding-block: 5%; espaço de dentro do fundo */
-    
-        border: solid 1px;
-    
-        /*alternativa antiga ao padding-block
-        box-sizing: border-box; */
-    
-}
-
-	.caixa {
-        width: 50%;
-
-		
-            
-			
-		} 
-
-		#exemplo-flaxbox{
-            margin-top: 0%;
-			background-color: #26120B;
-			display: flex;
-            flex-wrap: wrap;
-            border: none;
-            color: white;
-        
-            
-
-/*justify-content
-Em direção padrão "row", se comporta como alinhamento horizontal
-
-Se estiver na direção column, 
-se comporta como alinhamento vertical*/
-
- 			justify-content: space-evenly; 
-
-/*alieng-itens funciona de forma contréria. ou seja, em modo "row alinha verticamente.
-em modo "column", alinha horizontalmente*/
-
-			align-items: center;
-
-		 } 
-
-         footer {
-    height: 30px;
-    margin: 0%;
-    padding: 0%;
-    border: none;
-/* Fixar o footer na posição */
-/* Posicionar na parte inferior da tela */
-/* Ocupar toda a largura da tela */
-/* Garantir que o footer esteja acima de outros elementos */
-    left: 0%;
-    
-}
-
-/*         footer {
-    background-color:aquamarine;
-color: var(--cor-clara);
-height: 30vh;
-font-weight: bold;
-display: flex;
-justify-content: center;
-/*alinhar na horizontal*/
-/*     align-items: center;
-text-align: center;
-} */ 
-img {
-width: 20%;
-}
-
-.pernome {
-display: flex;
-align-items: center;
-text-align: center;
-margin: auto;
-
-}
-.nomeper {
-margin-left: 10%;
-}
-
-.linkper {
-left: 0%;
-margin-top: 5%;
-}
-
-/*         footer {
-            background-color:aquamarine;
-    color: var(--cor-clara);
-    height: 30vh;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    /*alinhar na horizontal*/
-/*     align-items: center;
-    text-align: center;
-        } */ 
-        .links-menu{
-    list-style: none;
-    display: none;
-}
-
-.container{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-	</style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        h2, h3, h4, main { text-align: center; }
+        header { background-color: #bf8869; height: 12vh; display: flex; justify-content: space-between; align-items: center; }
+        main { margin-top: 10%; margin-bottom: 20%; }
+        .com { color: black; font-weight: bold; display: inline-block; width: 50%; padding: 1%; border: solid 1px; }
+        .caixa { width: 50%; }
+        #exemplo-flaxbox { background-color: #26120B; display: flex; flex-wrap: wrap; color: white; justify-content: space-evenly; align-items: center; }
+        footer { height: 30px; margin: 0; padding: 0; left: 0; }
+        img { width: 20%; }
+        .pernome { display: flex; align-items: center; text-align: center; margin: auto; }
+        .nomeper { margin-left: 10%; }
+        .linkper { left: 0%; margin-top: 5%; }
+        .links-menu { list-style: none; display: none; }
+        .container { display: flex; justify-content: space-between; }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            
-            <h1><a href="index.html"><img src="imagens/logo-lemel.png" alt="logo"></a>
-                </h1>
-            <nav >
-                        <h2><a href="">Menu &equiv;</a></h2>
-                        <ul class="links-menu">
-                            <li><a href="">Inicio</a></li>
-                            <li><a href="">Produtos</a></li>
-                            <li><a href="">Minha conta</a></li>
-                            <li><a href="">Favoritos</a></li>
-                            <li><a href="">Sacolas</a></li>
-                            <li><a href="">Quem somos</a></li>
-                            <li><a href="">Suporte</a></li>
-                        </ul>
-                    </nav>
-
-                    
-
-                  
+            <h1><a href="index.html"><img src="imagens/logo-lemel.png" alt="logo"></a></h1>
+            <nav>
+                <h2><a href="">Menu &equiv;</a></h2>
+                <ul class="links-menu">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Produtos</a></li>
+                    <li><a href="">Minha conta</a></li>
+                    <li><a href="">Favoritos</a></li>
+                    <li><a href="">Sacolas</a></li>
+                    <li><a href="">Quem somos</a></li>
+                    <li><a href="">Suporte</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <form action="resultados.html"><input type="search" id="site-pesquisa" name="q" />
-            <button>Search</button>
-        </form>
+        <form action="resultados.html"><input type="search" id="site-pesquisa" name="q" /><button>Search</button></form>
         <h2><a href=".html"><img src="" alt="">Login</a></h2>
-
-                    <h2><a href="sacola.html"><img src="" alt="">sacola</a></h2>
-
+        <h2><a href="sacola.html"><img src="" alt="">sacola</a></h2>
     </header>
-
     <main>
         <h2>Login</h2>
         <h3>Informe seu E-mail</h3>
         <div>
             <label for="nome">Email:</label>
-            <input required placeholder="Digite seu email" type="email" name="email" id="email">  <button id="buscar">Buscar</button>
+            <input required placeholder="Digite seu email" type="email" name="email" id="email">  
+            <button id="buscar">Buscar</button>
         </div>
         <h4>ou</h4>
         <h3>Entre com</h3>
         <p class="com">Entra com Facebook</p>
         <p class="com">Entra com Google</p>
     </main>
-
-	<footer>
-<div id="exemplo-flaxbox">
-	<div class="caixa">
-		<h2>Contato</h2>
-        <ul>
-            <li>Atentimento</li>
-            <li>Onde encontrar</li>
-            <li>Chat Online</li>
-            <li>SEE ON MAP</li>
-        </ul>
-	</div>
-
-
-
-	<div class="caixa">
-		<h2>Siga</h2>
-        <ul>
-            <li><a href="https://www.instagram.com/lemelmodaeacessorios?igsh=MTlzemhvcGx2cGM3Zw==">@lemelmodaeacessorios</a></li>
-            <li>SEE ON MAP</li>
-	</div>
-
-
-
-	<div class="caixa">
-		<img src="imagens/mini-microsoft.jpg" alt="">
-		<h2>FAQ</h2>
-		<ul>
-            <li>Frete & entrega</li>
-            <li>Garantia</li>
-            <li>Forma de pagamento</li>
-            <li>Troca & devolução</li>
-            <li>Segurança</li>
-            <li>Termos & condições</li>
-        </ul>
-	</div>
-
-    <div class="caixa">
-		<h2>Minha conta</h2>
-        <ul>
-            <li>Meus dados</li>
-            <li>Meus pedidos</li>
-            <li>Minhas trocas</li>
-            <li>Vale compras</li>
-        </ul>
-	</div>
-
-</div>
-</footer>
-
+    <footer>
+        <div id="exemplo-flaxbox">
+            <div class="caixa">
+                <h2>Contato</h2>
+                <ul>
+                    <li>Atendimento</li>
+                    <li>Onde encontrar</li>
+                    <li>Chat Online</li>
+                    <li>SEE ON MAP</li>
+                </ul>
+            </div>
+            <div class="caixa">
+                <h2>Siga</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/lemelmodaeacessorios?ig_shid=MTlzemhvcGx2cGM3Zw==">@lemelmodaeacessorios</a></li>
+                    <li>SEE ON MAP</li>
+                </ul>
+            </div>
+            <div class="caixa">
+                <img src="imagens/mini-microsoft.jpg" alt="">
+                <h2>FAQ</h2>
+                <ul>
+                    <li>Frete & entrega</li>
+                    <li>Garantia</li>
+                    <li>Forma de pagamento</li>
+                    <li>Troca & devolução</li>
+                    <li>Segurança</li>
+                    <li>Termos & condições</li>
+                </ul>
+            </div>
+            <div class="caixa">
+                <h2>Minha conta</h2>
+                <ul>
+                    <li>Meus dados</li>
+                    <li>Meus pedidos</li>
+                    <li>Minhas trocas</li>
+                    <li>Vale compras</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
