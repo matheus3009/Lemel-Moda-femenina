@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+.exemplo {
+    width: 90%;
+    margin: auto;
+    background-color: yellow;
+}
+
 :root {
     --bege: #bf8869;
     --marrom: #26120b;
@@ -47,4 +53,7 @@ h1 img {
     display: flex;
     justify-content: space-between;
     
+}
+.img{
+    color: #000;
 }
