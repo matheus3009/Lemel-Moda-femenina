@@ -44,65 +44,70 @@
         </nav>
     </header>
     <main>
-        <section>
-            <!-- precisa adicionar links a imagem e sliders -->
-            <div>
-                <img src="" alt="imagens slider">
-            </div>
+        <section class="exemplo">
+            <div class="slider">
+                <!-- precisa adicionar links a imagem e sliders -->
+                <div>
+                    <img src="" alt="imagens slider">
+                </div>
 
-            <div>
-                <img src="" alt="imagens slider">
-            </div>
+                <div>
+                    <img src="" alt="imagens slider">
+                </div>
 
-            <div>
-                <img src="" alt="imagens slider">
-            </div>
+                <div>
+                    <img src="" alt="imagens slider">
+                </div>
 
-            <div>
-                <img src="" alt="imagens slider">
-            </div>
+                <div>
+                    <img src="" alt="imagens slider">
+                </div>
 
+            </div>
         </section>
+
         <hr>
+
+        <h3>categorias</h3>
         <section>
-            <h3>categorias</h3>
+            <div class="slider-cat">
+                <!-- slider -->
+                <div>
+                    <a href="">
+                        <img src="" alt="foto cat">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
 
-            <!-- slider -->
-            <div>
-                <a href="">
-                    <img src="" alt="foto cat">
-                </a>
-                <span>texto por vir</span>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto cat">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+
+                <div>
+                    <a href="">
+                        <img src="" alt="foto cat">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+
+                <div>
+                    <a href="">
+                        <img src="" alt="foto cat">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+
+                <div>
+                    <a href="">
+                        <img src="" alt="foto cat">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+
             </div>
-
-            <div>
-                <a href="">
-                    <img src="" alt="foto cat">
-                </a>
-                <span>texto por vir</span>
-            </div>
-
-            <div>
-                <a href="">
-                    <img src="" alt="foto cat">
-                </a>
-                <span>texto por vir</span>
-            </div>
-
-            <div>
-                <a href="">
-                    <img src="" alt="foto cat">
-                </a>
-                <span>texto por vir</span>
-            </div>
-
-            <div>
-                <a href="">
-                    <img src="" alt="foto cat">
-                </a>
-                <span>texto por vir</span>
-            </div>
-
         </section>
         <hr>
         <h2>Lançamentos</h2>
@@ -116,21 +121,25 @@
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
         <div>
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
         <div>
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
         <div>
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
         <hr>
         <h2>Popular</h2>
@@ -143,21 +152,25 @@
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <span>textoo por vir</span>
         </div>
         <div>
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
         <div>
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
         <div>
             <a href="">
                 <img src="" alt="foto Produtos">
             </a>
+            <p>texto por vir</p>
         </div>
 
         <hr>
@@ -202,6 +215,28 @@
         </div>
         <!-- diversos links por vir -->
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                autoplay: true
+            });
+        });
+    </script>
+
+    <script>
+         $(document).ready(function () {
+            $('.slider-cat').slick({
+                arrow: true,
+                Infinite: true,
+                slideToShow: 3,
+                slideToScroll: 3
+            });
+        });
+    </script>
 </body>
 
 </html>
