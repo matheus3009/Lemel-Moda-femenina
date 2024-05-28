@@ -111,35 +111,39 @@
 
         <h2>Lançamentos</h2>
 
-
         <div>
             <a href="">ver mais</a>
         </div>
 
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
+        <section>
+            <div class="slider-lan">
+
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+            </div>
+        </section>
         <hr>
         <h2>Popular</h2>
 
@@ -147,31 +151,34 @@
             <a href="">ver mais</a>
         </div>
 
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <span>textoo por vir</span>
-        </div>
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
-        <div>
-            <a href="">
-                <img src="" alt="foto Produtos">
-            </a>
-            <p>texto por vir</p>
-        </div>
-
+        <section>
+            <div class="slider-pop">
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <span>textoo por vir</span>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="" alt="foto Produtos">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+            </div>
+        </section>
         <hr>
 
         <div>
@@ -227,7 +234,7 @@
     </script>
 
     <script>
-         $(document).ready(function () {
+        $(document).ready(function () {
             $('.slider-cat').slick({
                 arrow: true,
                 Infinite: true,
@@ -236,6 +243,27 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.slider-lan').slick({
+                arrow: true,
+                Infinite: true,
+                slideToShow: 3,
+                slideToScroll: 3
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function () {
+        $('.slider-pop').slick({
+            arrow: true,
+            Infinite: true,
+            slideToShow: 3,
+            slideToScroll: 3
+        });
+    });
+</script>
 </body>
 
 </html>
