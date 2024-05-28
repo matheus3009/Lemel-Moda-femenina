@@ -1,0 +1,156 @@
+
+* { box-sizing: border-box;}
+
+* {
+box-sizing: border-box;
+}
+
+h2, h3,h4 {
+text-align: center;
+align-items: center;
+}
+
+html{
+border: n;
+}
+
+
+
+header {
+width: 100%;
+height: 100%;
+background-color: #bf8869;
+height: 12vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0%;
+top: 0;
+    position: sticky;
+    z-index: 100;
+
+}
+
+
+
+
+h1 {
+    width: 50%;
+    height: 30%;
+    padding: 20px;
+}
+
+.com {
+
+color: black;
+font-weight: bold;
+display: inline-block;/*tranforma em inline e block*/
+width: 50%;
+padding: 1%;
+/*  transition: 2s; aplica o efeito na saida e na volta*/
+
+
+
+/* padding-block: 5%; espaço de dentro do fundo */
+
+border: solid 1px;
+
+/*alternativa antiga ao padding-block
+box-sizing: border-box; */
+
+}
+
+.caixa {
+width: 50%;
+
+
+    
+    
+} 
+
+#exemplo-flaxbox{
+    margin-top: 0%;
+    background-color: #26120B;
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    color: white;
+
+    
+
+/*justify-content
+Em direção padrão "row", se comporta como alinhamento horizontal
+
+Se estiver na direção column, 
+se comporta como alinhamento vertical*/
+
+     justify-content: space-evenly; 
+
+/*alieng-itens funciona de forma contréria. ou seja, em modo "row alinha verticamente.
+em modo "column", alinha horizontalmente*/
+
+    align-items: center;
+
+ } 
+
+ footer {
+    height: 30px;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+/* Fixar o footer na posição */
+/* Posicionar na parte inferior da tela */
+/* Ocupar toda a largura da tela */
+/* Garantir que o footer esteja acima de outros elementos */
+    left: 0%;
+    
+}
+
+/*         footer {
+    background-color:aquamarine;
+color: var(--cor-clara);
+height: 30vh;
+font-weight: bold;
+display: flex;
+justify-content: center;
+/*alinhar na horizontal*/
+/*     align-items: center;
+text-align: center;
+} */ 
+img {
+width: 20%;
+}
+
+.pernome {
+display: flex;
+align-items: center;
+text-align: center;
+margin: auto;
+
+}
+
+main {
+
+margin-left: 10%;
+margin-bottom: 30%;
+}
+
+.nomeper {
+margin-left: 10%;
+}
+
+.linkper {
+left: 0%;
+margin-top: 5%;
+}
+
+.links-menu{
+    list-style: none;
+    display: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
