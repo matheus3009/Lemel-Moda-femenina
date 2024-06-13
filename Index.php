@@ -118,11 +118,11 @@
         <section>
             <div class="slider-lan">
 
-                <div>
+                <div class="produtos">
                     <a href="">
                         <img src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
                     </a>
-                    <p>texto por vir</p>
+                    <p>testando</p>
                 </div>
                 <div>
                     <a href="">
@@ -261,6 +261,7 @@
             Infinite: true,
             slideToShow: 3,
             slideToScroll: 3
+            
         });
     });
 </script>
