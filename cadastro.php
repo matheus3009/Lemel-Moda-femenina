@@ -1,3 +1,16 @@
+<?php 
+require_once "../inc/funcoes-usuarios.php";
+
+if(isset($_POST['inserir'])){
+	//Capturar os dados digitais
+	$nome = htmlspecialchars($_POST['nome']);
+	$email = htmlspecialchars($_POST['email']);
+	$tipo = htmlspecialchars($_POST['tipo']);
+
+	// Capturando a senha e a condificando
+	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -126,7 +139,7 @@
         <h2><a href="sacola.html"><img src="" alt="">sacola</a></h2>
     </header>
     <main>
-        <h2>Login</h2>
+        <h2>Cadastro</h2>
         <h3>Informe seu E-mail</h3>
         <br>
         <div>
@@ -149,15 +162,13 @@
             
         </div>
         <br>
-           <div>
-            <form action="perfil.html" method="GET">
-                
-                <label for="email"></label>
-                <input required placeholder="Digite seu telefone" type="email" name="email" id="email">
+        <div class="mb-3">
+				<label class="form-label" for="senha"></label>
+				<input 
+                placeholder="Digite sua senha"
+                class="form-control" type="password" id="senha" name="senha" required>
                 <button type="submit">Confirmar</button>
-            </form>
-            
-        </div>
+			</div>
 
         <h4>ou</h4>
         <h3>Entre com</h3>
