@@ -2,10 +2,10 @@
 /* Acessando os dados da conexão ao servidor */
 require "conecta.php";
 
-function inserirUsuario( $conexao, $nome, $email, $tipo, $senha ){
+function inserirUsuario( $conexao, $nome, $email, $tipo, $senha, $celular, $telefone, $rua, $numero, $cep, $cpf ){
 // Montando o comando SQL em uma varíavel
     $sql = "INSERT INTO usuarios(nome, email, tipo, senha)
-    VALUES('$nome', '$email', '$tipo', '$senha')";
+    VALUES('$nome', '$email', '$tipo', '$senha', '$celular', '$telefone', '$rua', '$numero', '$cep', '$cpf')";
 
     // Executando o comando no banco
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
@@ -14,7 +14,7 @@ function inserirUsuario( $conexao, $nome, $email, $tipo, $senha ){
 
 function lerUsuarios($conexao){
     // Comando SQL
-    $sql = "SELECT id, nome, tipo, email FROM usuarios ORDER BY nome";// ORDER BY coloca em ordem alfabética
+    $sql = "SELECT id, nome, tipo, email, telefone, rua, numero, cep, cpf FROM usuarios ORDER BY nome";// ORDER BY coloca em ordem alfabética
 
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
@@ -31,12 +31,17 @@ function lerUmUsuario($conexao, $id){
     return mysqli_fetch_assoc($resultado);
 }
 
-function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo){
+function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo, $celular, $telefone, $rua, $numero, $cep, $cpf){
     $sql = "UPDATE usuarios SET 
     nome = '$nome',
     email = '$email',
     senha = '$senha',
     tipo = '$tipo'
+    telefone = '$telefone',
+    rua = '$rua',
+    numero = '$numero',
+    cep = '$cep',
+    cpf = '$cpf'
     WHERE id = $id"; // Não esqueça !!!
 
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));

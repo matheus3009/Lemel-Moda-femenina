@@ -1,6 +1,7 @@
 
 <?php 
-require_once "../inc/funcoes-usuarios.php";
+require_once "inc/funcoes-usuarios.php";
+
 
 if(isset($_POST['inserir'])){
 	//Capturar os dados digitais
