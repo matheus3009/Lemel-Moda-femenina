@@ -67,43 +67,34 @@
 
         <h3>categorias</h3>
         <section>
-            <div class="slider-cat">
-                <!-- slider -->
+            <div class="cat">
                 <div>
                     <a href="">
-                        <img src="" alt="foto cat">
+                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
 
                 <div>
                     <a href="">
-                        <img src="" alt="foto cat">
+                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
 
                 <div>
                     <a href="">
-                        <img src="" alt="foto cat">
+                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
 
                 <div>
                     <a href="">
-                        <img src="" alt="foto cat">
+                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
-
-                <div>
-                    <a href="">
-                        <img src="" alt="foto cat">
-                    </a>
-                    <p>texto por vir</p>
-                </div>
-
             </div>
         </section>
 
@@ -117,72 +108,68 @@
 
         <section>
             <div class="slider-lan">
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
 
-                <div class="produtos-img">
-                
-                    <a href="">
-                        <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
-                    </a>
-                 
-                    <div class="produtos-text">
-                         <p>produto sla oq</p>
-                         <span>escrita</span>
-                    </div>
-                </div>
-            
-                <div class="produtos-img">
-                    <a href="">
-                        <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
-                </div>
-                <div class="produtos-img">
-                    <a href="">
-                        <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
-                </div>
-                <div>
-                    <a href="">
-                        <img src="" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
-                </div>
             </div>
         </section>
+
         <hr>
-        <h2>Popular</h2>
+        <h2>Ofertas</h2>
 
         <div>
             <a href="">ver mais</a>
         </div>
 
         <section>
-            <div class="slider-pop">
-                <div>
-                    <a href="">
-                        <img src="" alt="foto Produtos">
-                    </a>
-                    <span>textoo por vir</span>
+            <div class="slider-lan">
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
-                <div>
-                    <a href="">
-                        <img src="" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
-                <div>
-                    <a href="">
-                        <img src="" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
-                <div>
-                    <a href="">
-                        <img src="" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+                <div class="cada-slide">
+                    <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                </div>
+
             </div>
         </section>
         <hr>
@@ -231,46 +218,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('.slider').slick({
-                autoplay: true
-            });
-        });
-    </script>
 
     <script>
-        $(document).ready(function () {
-            $('.slider-cat').slick({
-                arrow: true,
-                Infinite: true,
-                slideToShow: 3,
-                slideToScroll: 3
-            });
+        $('.slider').slick({
+            autoplay: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
         });
     </script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.slider-lan').slick({
                 Infinite: true,
+                dots: true,
                 slideToShow: 3,
-                slideToScroll: 3
+                slideToScroll: 3,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
 
             });
         });
     </script>
 
-<script>
-    $(document).ready(function () {
-        $('.slider-pop').slick({
-            arrow: true,
-            Infinite: true,
-            slideToShow: 3,
-            slideToScroll: 3
-            
-        });
-    });
-</script>
 </body>
 
 </html>
