@@ -10,7 +10,7 @@ if(isset($_POST['inserir'])){
 
 	// Capturando a senha e a condificando
 	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
