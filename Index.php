@@ -118,21 +118,27 @@
         <section>
             <div class="slider-lan">
 
-                <div>
+                <div class="produtos-img">
+                
                     <a href="">
-                        <img src="" alt="foto Produtos">
+                        <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
+                    </a>
+                 
+                    <div class="produtos-text">
+                         <p>produto sla oq</p>
+                         <span>escrita</span>
+                    </div>
+                </div>
+            
+                <div class="produtos-img">
+                    <a href="">
+                        <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
                     </a>
                     <p>texto por vir</p>
                 </div>
-                <div>
+                <div class="produtos-img">
                     <a href="">
-                        <img src="" alt="foto Produtos">
-                    </a>
-                    <p>texto por vir</p>
-                </div>
-                <div>
-                    <a href="">
-                        <img src="" alt="foto Produtos">
+                        <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto Produtos">
                     </a>
                     <p>texto por vir</p>
                 </div>
@@ -246,10 +252,10 @@
     <script>
         $(document).ready(function () {
             $('.slider-lan').slick({
-                arrow: true,
                 Infinite: true,
                 slideToShow: 3,
                 slideToScroll: 3
+
             });
         });
     </script>
@@ -261,6 +267,7 @@
             Infinite: true,
             slideToShow: 3,
             slideToScroll: 3
+            
         });
     });
 </script>
