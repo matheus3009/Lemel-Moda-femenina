@@ -1,7 +1,125 @@
 <?php
-require_once"cabecalho.php"
+
+require_once"inc/funcoes-usuarios.php";
+
+//verificando se o usuario pode acessar essa pagina
+
+
+//Detectando se o botão inserir foi acionar
+ if(isset($_POST['inserir'])){
+	//Capturar os dados digitais
+	$nome = htmlspecialchars($_POST['nome']);
+	$email = htmlspecialchars($_POST['email']);
+	$tipo = htmlspecialchars($_POST['tipo']);
+
+	// Capturando a senha e a condificando
+	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+	//Chamando a função para de inserir usuários e passando os dados
+	inserirUsuario($conexao, $nome, $email, $tipo, $senha);
+
+	// Redirecionando para a lista de usuarios
+	header("location:perfil.html");
+}
 ?>
 
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2{
+            padding-bottom: 5%;
+            
+        }
+
+        h2,
+        h3,
+        h4,
+        main {
+            text-align: center;
+        }
+
+        header {
+            background-color: #bf8869;
+            height: 12vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        main {
+            margin-top: 5%;
+            margin-bottom: 50%;
+        }
+
+        .com {
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            width: 50%;
+            padding: 1%;
+            border: solid 1px;
+        }
+
+        .caixa {
+            width: 50%;
+        }
+
+        #exemplo-flaxbox {
+            background-color: #26120B;
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        footer {
+            height: 30px;
+            margin: 0;
+            left: 0;
+        }
+
+        img {
+            width: 20%;
+        }
+
+        .pernome {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .nomeper {
+            margin-left: 10%;
+        }
+
+        .linkper {
+            left: 0%;
+            margin-top: 5%;
+        }
+
+        .links-menu {
+            list-style: none;
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fg{
+            width: 5%;
+        }
+
+    </style>
+</head>
 <body>
     <header>
         <div class="container">
@@ -28,77 +146,24 @@ require_once"cabecalho.php"
         <h3>Informe seu E-mail</h3>
         <br>
 
-            <div>
-    <form action="perfil.html" method="GET">
-        <label for="nome"></label>
-        <input required placeholder="Digite seu nome" type="text" name="nome" id="nome">
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="email"></label>
-        <input required placeholder="Digite seu email" type="email" name="email" id="email">
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
-<br>
+        <form autocomplete="off" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">
+
 <div class="mb-3">
-    <form action="perfil.html" method="GET">
-        <label class="form-label" for="senha"></label>
-        <input placeholder="Digite sua senha" class="form-control" type="password" id="senha" name="senha" required>
-        <button type="submit">Confirmar</button>
-    </form>
+    <label class="form-label" for="nome">Nome:</label>
+    <input class="form-control" type="text" id="nome" name="nome" required>
 </div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="celular"></label>
-        <input required placeholder="Digite seu celular" type="tel" name="celular" id="celular" pattern="\(\d{2}\) \d{5}-\d{4}" title="Formato: (99) 99999-9999">
-        <button type="submit">Confirmar</button>
-    </form>
+
+<div class="mb-3">
+    <label class="form-label" for="email">E-mail:</label>
+    <input class="form-control" type="email" id="email" name="email" required>
 </div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="telefone"></label>
-        <input required placeholder="Digite seu telefone" type="tel" name="telefone" id="telefone" pattern="\(\d{2}\) \d{4}-\d{4}" title="Formato: (99) 9999-9999">
-        <button type="submit">Confirmar</button>
-    </form>
+
+<div class="mb-3">
+    <label class="form-label" for="senha">Senha:</label>
+    <input class="form-control" type="password" id="senha" name="senha" required>
 </div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="rua"></label>
-        <input required placeholder="Digite sua rua" type="text" name="rua" id="rua">
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="numero"></label>
-        <input required placeholder="Digite o número da casa" type="number" name="numero" id="numero">
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="cep"></label>
-        <input required placeholder="Digite seu CEP" type="text" name="cep" id="cep" pattern="\d{5}-\d{3}" title="Formato: 99999-999">
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
-<br>
-<div>
-    <form action="perfil.html" method="GET">
-        <label for="cpf"></label>
-        <input required placeholder="Digite seu CPF" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 999.999.999-99">
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
+
+<button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
 
 
         <h4>ou</h4>

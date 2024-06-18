@@ -1,74 +1,119 @@
-<?php
-require_once "funcoes-sessao.php";
-VerificaAcesso();
-
-/*  Se o parametro de URL 'sair' existir, ou seja, quando o link for clicado, então execute a função logout */
-if (isset($_GET['sair'])) logout();
+<?php 
+require_once "inc/funcoes-usuarios.php";
 
 
-// Guardando o nome da página atual
-$pagina = basename($_SERVER['PHP_SELF']);
+if(isset($_POST['inserir'])){
+	//Capturar os dados digitais
+	$nome = htmlspecialchars($_POST['nome']);
+	$email = htmlspecialchars($_POST['email']);
+	$tipo = htmlspecialchars($_POST['tipo']);
+
+	// Capturando a senha e a condificando
+	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+}
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" class="h-100">
+<html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Microblog</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-
-<link rel="stylesheet" href="../css/style.css">
-
-</head>
-<body id="admin" class="d-flex flex-column h-100 bg-light bg-gradient">
-    
-<header id="topo" class="border-bottom sticky-top">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
-  <div class="container">
-    <h1><a class="navbar-brand" href="index.php">Admin | Microblog</a></h1>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="meu-perfil.php">Meu perfil</a>
-            </li>
-               
-            <?php if ($_SESSION['tipo'] == "admin") { ?>
-            <li class="nav-item">
-                <a class="nav-link" href="usuarios.php">Usuários</a>
-            </li>
+        h2{
+            padding-bottom: 5%;
             
-            <?php } ?>
-            <li class="nav-item">
-                <a class="nav-link" href="noticias.php">Notícias</a>
-            </li>
+        }
 
-            <li class="nav-item">
-                <a class="nav-link" href="../index.php" target="_blank">Área pública</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link fw-bold" href="?sair"> <i class="bi bi-x-circle"></i> Sair</a>
-            </li>
-        </ul>
+        h2,
+        h3,
+        h4,
+        main {
+            text-align: center;
+        }
 
-    </div>
-  </div>
-</nav>
+        header {
+            background-color: #bf8869;
+            height: 12vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-</header>
+        }
 
-<main class="flex-shrink-0">
-    <div class="container">
+        main {
+            margin-top: 5%;
+            margin-bottom: 50%;
+        }
 
-    
+        .com {
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            width: 50%;
+            padding: 1%;
+            border: solid 1px;
+        }
+
+        .caixa {
+            width: 50%;
+        }
+
+        #exemplo-flaxbox {
+            background-color: #26120B;
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        footer {
+            height: 30px;
+            margin: 0;
+            left: 0;
+        }
+
+        img {
+            width: 20%;
+        }
+
+        .pernome {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .nomeper {
+            margin-left: 10%;
+        }
+
+        .linkper {
+            left: 0%;
+            margin-top: 5%;
+        }
+
+        .links-menu {
+            list-style: none;
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fg{
+            width: 5%;
+        }
+
+    </style>
+</head>

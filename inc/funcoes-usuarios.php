@@ -2,10 +2,10 @@
 /* Acessando os dados da conexão ao servidor */
 require "conecta.php";
 
-function inserirUsuario( $conexao, $nome, $email, $tipo, $senha, $celular, $telefone, $rua, $numero, $cep, $cpf ){
+function inserirUsuario( $conexao, $nome, $email, $tipo, $senha ){
 // Montando o comando SQL em uma varíavel
-    $sql = "INSERT INTO usuarios(nome, email, tipo, senha)
-    VALUES('$nome', '$email', '$tipo', '$senha', '$celular', '$telefone', '$rua', '$numero', '$cep', '$cpf')";
+    $sql = "INSERT INTO clientes(nome, email, tipo, senha)
+    VALUES('$nome', '$email', '$tipo', '$senha')";
 
     // Executando o comando no banco
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
@@ -14,7 +14,7 @@ function inserirUsuario( $conexao, $nome, $email, $tipo, $senha, $celular, $tele
 
 function lerUsuarios($conexao){
     // Comando SQL
-    $sql = "SELECT id, nome, tipo, email, telefone, rua, numero, cep, cpf FROM usuarios ORDER BY nome";// ORDER BY coloca em ordem alfabética
+    $sql = "SELECT id, nome, tipo, email FROM clientes ORDER BY nome";// ORDER BY coloca em ordem alfabética
 
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
@@ -23,7 +23,7 @@ function lerUsuarios($conexao){
 }
 
 function lerUmUsuario($conexao, $id){
-    $sql = "SELECT * FROM usuarios WHERE id = $id";
+    $sql = "SELECT * FROM clientes WHERE id = $id";
     $resultado = mysqli_query($conexao, $sql)
     or die(mysqli_error($conexao));
     
@@ -31,17 +31,12 @@ function lerUmUsuario($conexao, $id){
     return mysqli_fetch_assoc($resultado);
 }
 
-function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo, $celular, $telefone, $rua, $numero, $cep, $cpf){
-    $sql = "UPDATE usuarios SET 
+function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo){
+    $sql = "UPDATE clientes SET 
     nome = '$nome',
     email = '$email',
     senha = '$senha',
     tipo = '$tipo'
-    telefone = '$telefone',
-    rua = '$rua',
-    numero = '$numero',
-    cep = '$cep',
-    cpf = '$cpf'
     WHERE id = $id"; // Não esqueça !!!
 
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
@@ -51,7 +46,7 @@ function excluirUsuario($conexao, $id){
   
     
       // Monta a consulta SQL para excluir o usuário
-      $sql = "DELETE FROM usuarios WHERE id = $id";
+      $sql = "DELETE FROM clientes WHERE id = $id";
     
       // Executa a consulta no banco de dados
       mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
@@ -59,7 +54,7 @@ function excluirUsuario($conexao, $id){
 }
 
 function buscarUsuario($conexao, $email){
-    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $sql = "SELECT * FROM clientes WHERE email = '$email'";
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
     return mysqli_fetch_assoc($resultado);
