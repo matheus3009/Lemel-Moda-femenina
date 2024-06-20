@@ -4,7 +4,7 @@ require "conecta.php";
 
 function inserirUsuario( $conexao, $nome, $email, $tipo, $senha ){
 // Montando o comando SQL em uma varíavel
-    $sql = "INSERT INTO clientes(nome, email, tipo, senha)
+    $sql = "INSERT INTO usuarios(nome, email, tipo, senha)
     VALUES('$nome', '$email', '$tipo', '$senha')";
 
     // Executando o comando no banco
@@ -54,7 +54,7 @@ function excluirUsuario($conexao, $id){
 }
 
 function buscarUsuario($conexao, $email){
-    $sql = "SELECT * FROM clientes WHERE email = '$email'";
+    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
     return mysqli_fetch_assoc($resultado);
