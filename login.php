@@ -1,7 +1,7 @@
 <?php
-
-require_once"inc/funcoes-usuarios.php";
-require "inc/funcoes-sessao.php"; 
+require "inc/cabecalho.php";
+require_once "inc/funcoes-usuarios.php";
+require_once "inc/funcoes-sessao.php"; 
 
 /* Mensagens de feedback */
 if (isset($_GET['campos_obrigatorios'])) {
@@ -38,7 +38,7 @@ if (isset($_POST['entrar'])) {
 		login($usuario['id'], $usuario['nome'], $usuario['tipo']);
 
 		// Redirecione para a index admin
-		header("location:admin/index.php");
+		header("location:perfil.html");
 
 		exit;
 	} else {
