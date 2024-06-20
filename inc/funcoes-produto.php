@@ -34,31 +34,31 @@ function upload($arquivo)
     move_uploaded_file($temporario, $destino);
 }
 
-function inserirNoticia($conexao, $titulo, $texto, $resumo, $nomeImagem, $usuarioId)
+function inserirProduto($conexao, $titulo, $descricao, $nomeImagem, $usuarioId)
 {
-    $sql = "INSERT INTO noticias(titulo, texto, resumo, imagem, usuario_id) VALUES ('$titulo', '$texto', '$resumo', '$nomeImagem', '$usuarioId')";
+    $sql = "INSERT INTO produtos(titulo, descricao, imagem, usuario_id) VALUES ('$titulo','$descricao','$nomeImagem','$usuarioId')";
 
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 
-function lerNoticias($conexao, $idUsuario, $tipoUsuario)
+function lerProduto($conexao, $idUsuario, $tipoUsuario)
 {
 
     if ($tipoUsuario == 'admin') {
         //pode ver tudo
 
         $sql = "SELECT
-    noticias.id,
-    noticias.titulo,
-    noticias.data,
+    produtos.id,
+    produtos.titulo,
+    produtos.data,
     usuarios.nome
-      FROM noticias JOIN usuarios
-     ON noticias.usuario_id = usuarios.id 
+      FROM produtos JOIN usuarios
+     ON produtos.usuario_id = usuarios.id 
      ORDER BY data DESC";
     } else {
         //pode ver somente do proprio usuario
 
-        $sql = "SELECT titulo, data, id FROM noticias
+        $sql = "SELECT titulo, data, id FROM produtos
         WHERE usuario_id = $idUsuario
         ORDER BY data DESC";
     }
@@ -70,15 +70,15 @@ function lerNoticias($conexao, $idUsuario, $tipoUsuario)
     return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
 
-function lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario)
+function lerUmProduto($conexao, $idProduto, $idUsuario, $tipoUsuario)
 {
 
     if ($tipoUsuario == 'admin') {
         // Pode ver qualquer noticia
-        $sql = "SELECT * FROM noticia WHERE id = $idNoticia";
+        $sql = "SELECT * FROM produtos WHERE id = $idProduto";
     } else {
         // ver somente sua noticia (basta sbaer qual a noticia e o )
-        $sql = "SELECT * FROM noticias WHERE id = $idNoticia AND usuario_id = $idUsuario";
+        $sql = "SELECT * FROM produtos WHERE id = $idProduto AND usuario_id = $idUsuario";
     }
 
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
@@ -86,38 +86,38 @@ function lerUmaNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario)
     return mysqli_fetch_assoc($resultado);
 }
 
-function atualizarNoticia($conexao, $titulo, $texto, $resumo, $imagem, $idNoticia, $idUsuario, $tipoUsuario)
+function atualizarProduto($conexao, $titulo, $texto, $resumo, $imagem, $idProdutos, $idUsuario, $tipoUsuario)
 {
     if ($tipoUsuario == 'admin') {
         /* Pode atualizar qualquer noticia (basta saber qual noticia)*/
-        $sql = "UPDATE noticias SET 
+        $sql = "UPDATE produtos SET 
         titulo = '$titulo',
         texto = '$texto',
         resumo = '$resumo',
         imagem = '$imagem'
-        WHERE id = $idNoticia"; // PERIGO
+        WHERE id = $idProdutos"; // PERIGO
     } else {
         /* Pode atualizar somente suas noticia (basta saber qual a noticia e usuario) */
-        $sql = "UPDATE noticias SET 
+        $sql = "UPDATE produtos SET 
         titulo = '$titulo',
         texto = '$texto',
         resumo = '$resumo',
         imagem = '$imagem'
-        WHERE id = $idNoticia AND usuario_id = $idUsuario"; // PERIGO
+        WHERE id = $idProdutos AND usuario_id = $idUsuario"; // PERIGO
     }
 
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }
 
-function excluirNoticia($conexao, $idNoticia, $idUsuario, $tipoUsuario)
+function excluirNoticia($conexao, $idProdutos, $idUsuario, $tipoUsuario)
 {
     if ($tipoUsuario == 'admin') {
 
         // Pode apagar QUALQUER noticias sabendo o id dela
-        $sql = "DELETE FROM noticias WHERE id = $idNoticia";
+        $sql = "DELETE FROM produtos WHERE id = $idProdutos";
     } else {
 
-        $sql = "DELETE FROM noticias WHERE id = $idNoticia AND  usuario_id";
+        $sql = "DELETE FROM produtos WHERE id = $idProdutos AND  usuario_id";
     }
 
     // Pode apagar Somente as proprias noticias sabendo o id dela e do user
@@ -132,17 +132,17 @@ index, noticia, resultados
 
 
 //index.php
-function lerTodasNoticias($conexao)
+function lerTodasProdutos($conexao)
 {
     $sql = "SELECT titulo, imagem, resumo, id
-        FROM noticias ORDER BY data DESC";
+        FROM produtos ORDER BY data DESC";
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
     return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
 
 // noticias.php
-function lerNoticiaCompleta($conexao, $id)
+function lerProdutoCompleta($conexao, $id)
 {
     /* $sql = "SELECT 
     noticias.id,
@@ -161,7 +161,7 @@ function lerNoticiaCompleta($conexao, $id)
     n.texto,
     n.imagem,
     u.nome
-    FROM noticias n
+    FROM produtos n
      JOIN usuarios u ON n.usuario_id = u.id 
      WHERE n.id = $id"; // só esta parte que foi customizada";
 
@@ -176,7 +176,7 @@ function busca($conexao, $termoBuscado){
 
     //Ambos são nescessários para que a busca seja mais abrangente, permitindo que o terno esteja em qualquer lugar dentro das colunas.
 
-    $sql = "SELECT id, data, titulo, resumo FROM noticias
+    $sql = "SELECT id, data, titulo, resumo FROM produtos
     WHERE
      titulo LIKE '%$termoBuscado%' OR
      resumo LIKE '%$termoBuscado%'OR

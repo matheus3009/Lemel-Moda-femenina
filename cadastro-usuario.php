@@ -4,13 +4,18 @@ require_once"inc/funcoes-usuarios.php";
 
 //verificando se o usuario pode acessar essa pagina
 
+// Defina a variável $tipo antes de usá-la
+$tipo = isset($_POST['tipo']) ? $_POST['tipo'] : null; // ou qualquer valor padrão apropriado
+
+// Agora use a variável $tipo
+// Certifique-se de que a variável está corretamente atribuída antes de usá-la
 
 //Detectando se o botão inserir foi acionar
  if(isset($_POST['inserir'])){
 	//Capturar os dados digitais
 	$nome = htmlspecialchars($_POST['nome']);
 	$email = htmlspecialchars($_POST['email']);
-	$tipo = htmlspecialchars($_POST['tipo']);
+	//$tipo = htmlspecialchars($_POST['tipo']);
 
 	// Capturando a senha e a condificando
 	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
