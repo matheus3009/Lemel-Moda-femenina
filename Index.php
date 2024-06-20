@@ -41,23 +41,23 @@
         </div>
     </header>
     <main>
-        <section class="exemplo">
+        <section class="cont">
             <div class="slider">
                 <!-- precisa adicionar links a imagem e sliders -->
                 <div>
-                    <img src="" alt="imagens slider">
+                    <img class="foto-slide" src="imagens/desenvolvimento-web.jpg" alt="imagens slider">
                 </div>
 
                 <div>
-                    <img src="" alt="imagens slider">
+                    <img  class="foto-slide" src="imagens/marketing-digital.jpg" alt="imagens slider">
                 </div>
 
                 <div>
-                    <img src="" alt="imagens slider">
+                    <img  class="foto-slide" src="imagens/design-grafico.jpg" alt="imagens slider">
                 </div>
 
                 <div>
-                    <img src="" alt="imagens slider">
+                    <img  class="foto-slide" src="imagens/consultoria-treinamento.jpg" alt="imagens slider">
                 </div>
 
             </div>
@@ -65,109 +65,101 @@
 
         <hr>
 
-        <h3>categorias</h3>
+        <h2 style="text-align: center;">categorias</h2>
         <section>
             <div class="cat">
-                <div>
+                <div class="img-cat">
                     <a href="">
-                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
+                        <img src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
 
-                <div>
+                <div class="img-cat">
                     <a href="">
-                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
+                        <img src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
+                    </a>
+                    <p>texto por vir</p>
+                </div>
+                <div class="img-cat">
+                    <a href="">
+                        <img src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
 
-                <div>
+                <div class="img-cat">
                     <a href="">
-                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
+                        <img src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
                     </a>
                     <p>texto por vir</p>
                 </div>
 
-                <div>
-                    <a href="">
-                        <img class="img-cat" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="foto cat">
-                    </a>
-                    <p>texto por vir</p>
-                </div>
+
             </div>
         </section>
 
         <hr>
 
-        <h2>Lançamentos</h2>
-
-        <div>
-            <a href="">ver mais</a>
-        </div>
+        <h2 class="h2-container">Lançamentos</h2>
 
         <section>
             <div class="slider-lan">
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
 
             </div>
         </section>
 
         <hr>
-        <h2>Ofertas</h2>
-
-        <div>
-            <a href="">ver mais</a>
-        </div>
-
+        <h2 class="h2-container">Ofertas</h2>
         <section>
             <div class="slider-lan">
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
                 <div class="cada-slide">
                     <img class="img-pro" src="imagens/lemel/334515675_645669600655109_139508241733260701_n.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
+                    <p class="p-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor quos eveniet ea sapiente repellat laudantium corporis nihil sint amet.</p>
                 </div>
 
             </div>
@@ -175,7 +167,7 @@
         <hr>
 
         <div>
-            <h2>localização</h2>
+            <h2 class="h2-container">Localização</h2>
 
             <!-- coisas por vir -->
         </div>
