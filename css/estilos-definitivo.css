@@ -4,3 +4,13 @@
     padding: 0;
 }
 
+:root {
+    --bege: #bf8869;
+    --marrom: #26120b;
+    --terracota: #8c5b4a;
+    --cinza: #a69895;
+    --vermelho: #a6514a;
+    --branco: #fff;
+    --preto: #000;
+}
+

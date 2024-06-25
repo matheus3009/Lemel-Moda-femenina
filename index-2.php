@@ -14,7 +14,7 @@
         <h1>Lojas lemel</h1>
         <!-- slider topo da pagina = inicial -->
         <section>
-            <div>
+            <div class="slider-topo">
                 <div><img src="" alt="">imagens-lemel</div>
                 <div><img src="" alt="">imagens-lemel</div>
                 <div><img src="" alt="">imagens-lemel</div>
@@ -65,6 +65,7 @@
 
         <section>
             <!-- conteudo lançamentos -->
+        <div class="slider-conteudo">
             <div>
                 <div>
                     <img src="" alt="lançamentos">
@@ -92,6 +93,7 @@
                     <p>slider-lançamentos</p>
                 </div>
             </div>
+        </div>
         </section>
 
         <hr><!-- OBS: lançamentos e ofertas compartilham o mesmo slider -->
@@ -101,7 +103,7 @@
         <section>
             <!-- conteudo - ofertas -->
 
-            <div>
+            <div class="slider-conteudo">
                 <div>
                     <img src="" alt="ofertas">
                     <p>ofertas - slider</p>
@@ -130,6 +132,54 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
+
+    <script>
+        $('.slider-topo').slick({
+            autoplay: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    </script>
+
+    <script>
+        $('.slider-conteudo').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
 </body>
 
 </html>
