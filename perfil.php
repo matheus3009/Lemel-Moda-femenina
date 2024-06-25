@@ -13,27 +13,13 @@ require "inc/funcoes-usuarios.php";
 //    4.5) Redirecione para a página index.php (a que está dentro de admin)
 // 5) DESAFIO: faça com que, ao mudar o nome do usuário, automaticamente apareça o novo nome na index.php
 
-$idUsuario = $_SESSION['id'];
+$idUsuario = 2;
 
 $perfil = lerUmUsuario($conexao, $idUsuario);
 
 if (isset($_POST['atualizar'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-
-    $tipoUsuario = $_SESSION['tipo'];
-
-    if (empty($_POST['senha'])) {
-        // Manter a mesma senha (copiamos ela para uma variavel)
-        $senha = $perfil['senha'];
-    } else {
-        // Caso contrário, pegaremos a senha nova digitada e a CODIFICAREMOS ANTES de mandar/salvar no banco.
-        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-    }
-
-    atualizarUsuario($conexao, $idUsuario, $nome, $email, $senha, $tipoUsuario);
-    header("Location: index.php");
-    exit;
 }
 ?>
 <!DOCTYPE html>

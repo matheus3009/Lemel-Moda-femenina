@@ -28,7 +28,7 @@ function upload($arquivo)
     $temporario = $arquivo['tmp_name'];
 
     /* Definindo da pasta de destino + nome do arquivo da imagem */
-    $destino = "../imagens/" . $nome;
+    $destino = "imagens/" . $nome;
 
     /* Movendo o arquivo/imagem de area temporaria para a pasta de destino indicado (imagens) */
     move_uploaded_file($temporario, $destino);
@@ -36,7 +36,7 @@ function upload($arquivo)
 
 function inserirProduto($conexao, $titulo, $descricao, $nomeImagem, $preco, $usuarioId)
 {
-    $sql = "INSERT INTO produtos(titulo, descricao, imagem, preco, usuario_id) VALUES ('$titulo','$descricao','$nomeImagem','$preco', $usuarioId')";
+    $sql = "INSERT INTO produtos(titulo, descricao, imagem, preco, usuario_id) VALUES ('$titulo','$descricao','$nomeImagem','$preco', $usuarioId)";
 
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }

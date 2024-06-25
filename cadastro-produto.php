@@ -12,8 +12,7 @@ if (isset($_POST['inserir'])) {
     $preco = htmlspecialchars($_POST['preco']);
 
     /* Obtendo o id do usuário que esta logado e inserindo a noticia. Portanto, a notícia será associada ao usuário devido ao uso de chave estrageira e relacionamento no banco. */
-
-
+    $usuarioId = 2;
     /* Captura dados de arquivos enviados */
     $imagem = $_FILES['imagem'];
 
@@ -21,10 +20,11 @@ if (isset($_POST['inserir'])) {
     upload($imagem);
 
     /* Enviar os dados para o banco de dados */
-    inserirProduto($conexao, $titulo, $descricao, $imagem['nome'], $preco, $usuarioId);
+    inserirProduto($conexao, $titulo, $descricao, $imagem['name'], $preco, $usuarioId);
 
     header("location:index.php");
 }
+
 ?>
 
 <style>
