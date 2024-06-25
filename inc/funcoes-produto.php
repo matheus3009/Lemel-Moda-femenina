@@ -34,9 +34,9 @@ function upload($arquivo)
     move_uploaded_file($temporario, $destino);
 }
 
-function inserirProduto($conexao, $titulo, $descricao, $nomeImagem, $usuarioId)
+function inserirProduto($conexao, $titulo, $descricao, $nomeImagem, $preco, $usuarioId)
 {
-    $sql = "INSERT INTO produtos(titulo, descricao, imagem, usuario_id) VALUES ('$titulo','$descricao','$nomeImagem','$usuarioId')";
+    $sql = "INSERT INTO produtos(titulo, descricao, imagem, preco, usuario_id) VALUES ('$titulo','$descricao','$nomeImagem','$preco', $usuarioId')";
 
     mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 }

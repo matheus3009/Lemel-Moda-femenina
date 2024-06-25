@@ -1,134 +1,135 @@
 <?php
 
-require_once"inc/funcoes-produto.php";
+require_once "inc/funcoes-produto.php";
 
 //verificando se o usuario pode acessar essa pagina
 
 
 //Detectando se o botão inserir foi acionar
 if (isset($_POST['inserir'])) {
-	$titulo = htmlspecialchars($_POST['titulo']);
-	$texto = htmlspecialchars($_POST['texto']);
-	$resumo = htmlspecialchars($_POST['resumo']);
+    $titulo = htmlspecialchars($_POST['titulo']);
+    $descricao = htmlspecialchars($_POST['descricao']);
+    $preco = htmlspecialchars($_POST['preco']);
 
-	/* Obtendo o id do usuário que esta logado e inserindo a noticia. Portanto, a notícia será associada ao usuário devido ao uso de chave estrageira e relacionamento no banco. */
-	$usuarioId = $_SESSION['id'];
+    /* Obtendo o id do usuário que esta logado e inserindo a noticia. Portanto, a notícia será associada ao usuário devido ao uso de chave estrageira e relacionamento no banco. */
 
-	/* Captura dados de arquivos enviados */
-	$imagem = $_FILES['imagem'];
 
-	/* Fazendo upload da imagem para o servidor */
-	upload($imagem);
+    /* Captura dados de arquivos enviados */
+    $imagem = $_FILES['imagem'];
 
-	/* Enviar os dados para o banco de dados */
-	inserirProduto($conexao, $titulo, $texto, $resumo, $imagem['name'], $usuarioId);
+    /* Fazendo upload da imagem para o servidor */
+    upload($imagem);
+
+    /* Enviar os dados para o banco de dados */
+    inserirProduto($conexao, $titulo, $descricao, $imagem['nome'], $preco, $usuarioId);
+
+    header("location:index.php");
 }
 ?>
 
 <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        h2{
-            padding-bottom: 5%;
-            
-        }
+    h2 {
+        padding-bottom: 5%;
 
-        h2,
-        h3,
-        h4,
-        main {
-            text-align: center;
-        }
+    }
 
-        header {
-            background-color: #bf8869;
-            height: 12vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    h2,
+    h3,
+    h4,
+    main {
+        text-align: center;
+    }
 
-        }
+    header {
+        background-color: #bf8869;
+        height: 12vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        main {
-            margin-top: 5%;
-            margin-bottom: 50%;
-        }
+    }
 
-        .com {
-            color: black;
-            font-weight: bold;
-            display: inline-block;
-            width: 50%;
-            padding: 1%;
-            border: solid 1px;
-        }
+    main {
+        margin-top: 5%;
+        margin-bottom: 50%;
+    }
 
-        .caixa {
-            width: 50%;
-        }
+    .com {
+        color: black;
+        font-weight: bold;
+        display: inline-block;
+        width: 50%;
+        padding: 1%;
+        border: solid 1px;
+    }
 
-        #exemplo-flaxbox {
-            background-color: #26120B;
-            display: flex;
-            flex-wrap: wrap;
-            color: white;
-            justify-content: space-evenly;
-            align-items: center;
-        }
+    .caixa {
+        width: 50%;
+    }
 
-        footer {
-            height: 30px;
-            margin: 0;
-            left: 0;
-        }
+    #exemplo-flaxbox {
+        background-color: #26120B;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
-        img {
-            width: 20%;
-        }
+    footer {
+        height: 30px;
+        margin: 0;
+        left: 0;
+    }
 
-        .pernome {
-            display: flex;
-            align-items: center;
-            text-align: center;
+    img {
+        width: 20%;
+    }
 
-        }
+    .pernome {
+        display: flex;
+        align-items: center;
+        text-align: center;
 
-        .nomeper {
-            margin-left: 10%;
-        }
+    }
 
-        .linkper {
-            left: 0%;
-            margin-top: 5%;
-        }
+    .nomeper {
+        margin-left: 10%;
+    }
 
-        .links-menu {
-            list-style: none;
-            display: none;
-        }
+    .linkper {
+        left: 0%;
+        margin-top: 5%;
+    }
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-        }
+    .links-menu {
+        list-style: none;
+        display: none;
+    }
 
-        .fg{
-            width: 5%;
-        }
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        div{
-            align-items: center;
-            text-align: center;
-            
-        }
+    .fg {
+        width: 5%;
+    }
 
+    div {
+        align-items: center;
+        text-align: center;
 
-    </style>
+    }
+</style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -152,26 +153,34 @@ if (isset($_POST['inserir'])) {
     </header>
     <main>
         <h2>Cadastrar produto</h2>
-<div class="mb-3">
-    <label class="form-label" for="nome">Nome do produto:</label>
-    <input class="form-control" type="text" id="nome" name="nome" required>
-</div>
 
-<div class="mb-3">
-    <label class="form-label" for="email">descrição:</label>
-    <input class="form-control" type="email" id="email" name="email" required>
-</div>
+        <form enctype="multipart/form-data" autocomplete="off" class="mx-auto w-75" action="" method="post" id="form-inserir" name="form-inserir">    
 
-<div class="mb-3">
-                <label class="form-label" for="imagem" class="form-label">Selecione uma imagem:</label>
-                <input required class="form-control" type="file" id="imagem" name="imagem"
-                accept="image/png, image/jpeg, image/gif, image/svg+xml">
-			</div>
+        <div class="mb-3">
+            <label class="form-label" for="titulo">Nome do produto:</label>
+            <input class="form-control" type="text" id="titulo" name="titulo" required>
+        </div>
 
-<button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
+        <div class="mb-3">
+            <label class="form-label" for="descricao">descrição:</label>
+            <input class="form-control" type="text" id="descricao" name="descricao" required>
+        </div>
 
+        <div class="mb-3">
+            <label class="form-label" for="imagem" class="form-label">Selecione uma imagem:</label>
+            <input required class="form-control" type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/gif, image/svg+xml">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="preco">preço</label>
+            <input class="form-control" type="text" id="preco" name="preco" required>
+        </div>
+
+        <button class="btn btn-primary" id="inserir" name="inserir"><i class="bi bi-save"></i> Inserir</button>
+
+        </form>
 
     </main>
-<?php 
-require_once"rodape.html"
-?>
+    <?php
+    require_once "rodape.html"
+    ?>
