@@ -1,5 +1,5 @@
 <?php 
-
+require "inc/funcoes-sessao.php";
 require "inc/funcoes-usuarios.php";
 
 // 1) Carregue as funções de usuários
@@ -20,6 +20,20 @@ $perfil = lerUmUsuario($conexao, $idUsuario);
 if (isset($_POST['atualizar'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
+
+    $tipoUsuario = $_SESSION['tipo'];
+
+    if (empty($_POST['senha'])) {
+        // Manter a mesma senha (copiamos ela para uma variavel)
+        $senha = $perfil['senha'];
+    } else {
+        // Caso contrário, pegaremos a senha nova digitada e a CODIFICAREMOS ANTES de mandar/salvar no banco.
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    }
+
+    atualizarUsuario($conexao, $idUsuario, $nome, $email, $senha, $tipoUsuario);
+    header("Location: index.php");
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -69,7 +83,7 @@ if (isset($_POST['atualizar'])) {
         <div class="pernome">
         <img src="user.png" alt="">
         <div class="nomeper">
-        <p>Nome do usuário</p>
+        <p><?=$_SESSION['name']?></p>
         <p>Nome da conta</p>
     </div>
     </div>

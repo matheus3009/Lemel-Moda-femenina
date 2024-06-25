@@ -23,7 +23,7 @@ function lerUsuarios($conexao){
 }
 
 function lerUmUsuario($conexao, $id){
-    $sql = "SELECT * FROM clientes WHERE id = $id";
+    $sql = "SELECT * FROM usuarios WHERE id = $id";
     $resultado = mysqli_query($conexao, $sql)
     or die(mysqli_error($conexao));
     
