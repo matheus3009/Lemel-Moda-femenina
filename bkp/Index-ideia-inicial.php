@@ -28,7 +28,7 @@
                     </ul>
                 </nav>
 
-                <h1><a href="index.html"><img src="imagens/logo-lemel.png" alt="logo"></a>            </h1>
+                <h1><a href="index.html"><img src="imagens/logo-lemel.png" alt="logo"></a> </h1>
 
                 <nav class="icones">
                     <form action="resultados.html"><input type="search" id="site-pesquisa" name="q" />
@@ -49,15 +49,15 @@
                     </div>
 
                     <div>
-                        <img  class="foto-slide" src="imagens/marketing-digital.jpg" alt="imagens slider">
+                        <img class="foto-slide" src="imagens/marketing-digital.jpg" alt="imagens slider">
                     </div>
 
                     <div>
-                        <img  class="foto-slide" src="imagens/design-grafico.jpg" alt="imagens slider">
+                        <img class="foto-slide" src="imagens/design-grafico.jpg" alt="imagens slider">
                     </div>
 
                     <div>
-                        <img  class="foto-slide" src="imagens/consultoria-treinamento.jpg" alt="imagens slider">
+                        <img class="foto-slide" src="imagens/consultoria-treinamento.jpg" alt="imagens slider">
                     </div>
 
                 </div>
@@ -207,7 +207,7 @@
             <!-- diversos links por vir -->
         </footer>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
 
@@ -227,29 +227,31 @@
             $('.slider-lan').slick({
                 Infinite: true,
                 dots: true,
-                slideToShow: 3,
-                slideToScroll: 3,
-                responsive: [{
+                // slideToShow: 3,
+                // slideToScroll: 3,
+                responsive: [
+                    {
+                    breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },                    
+                    {
+                        breakpoint: 600,  // 
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    
+                    {
                         breakpoint: 1024,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 3,
                             infinite: true,
                             dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
                         }
                     }
                 ]
