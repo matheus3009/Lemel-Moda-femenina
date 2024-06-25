@@ -1,5 +1,5 @@
 <?php 
-
+require "inc/funcoes-sessao.php";
 require "inc/funcoes-usuarios.php";
 
 // 1) Carregue as funções de usuários
@@ -13,7 +13,7 @@ require "inc/funcoes-usuarios.php";
 //    4.5) Redirecione para a página index.php (a que está dentro de admin)
 // 5) DESAFIO: faça com que, ao mudar o nome do usuário, automaticamente apareça o novo nome na index.php
 
-$idUsuario = $_SESSION['id'];
+$idUsuario = 2;
 
 $perfil = lerUmUsuario($conexao, $idUsuario);
 
@@ -83,7 +83,7 @@ if (isset($_POST['atualizar'])) {
         <div class="pernome">
         <img src="user.png" alt="">
         <div class="nomeper">
-        <p>Nome do usuário</p>
+        <p><?=$_SESSION['name']?></p>
         <p>Nome da conta</p>
     </div>
     </div>
