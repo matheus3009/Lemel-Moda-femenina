@@ -13,11 +13,9 @@ require "inc/funcoes-usuarios.php";
 //    4.5) Redirecione para a página index.php (a que está dentro de admin)
 // 5) DESAFIO: faça com que, ao mudar o nome do usuário, automaticamente apareça o novo nome na index.php
 
-$idUsuario = 2;
-$email = 'kaiju@8';
-$senha = '8';
 
-$perfil = lerUmUsuario($conexao, $idUsuario);
+
+/* $perfil = lerUmUsuario($conexao, $idUsuario);
 
 if (isset($_POST['atualizar'])) {
     $nome = $_POST['nome'];
@@ -36,7 +34,7 @@ if (isset($_POST['atualizar'])) {
     atualizarUsuario($conexao, $idUsuario, $nome, $email, $senha, $tipoUsuario);
     header("Location: index.php");
     exit;
-}
+} */
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -74,7 +72,7 @@ if (isset($_POST['atualizar'])) {
         <form action="resultados.html"><input type="search" id="site-pesquisa" name="q" />
             <button>Search</button>
         </form>
-        <h2><a href=".html"><img src="" alt="">Login</a></h2>
+        <h2><a href="login.php"><img src="" alt="">Login</a></h2>
 
                     <h2><a href="sacola.html"><img src="" alt="">sacola</a></h2>
 
@@ -85,7 +83,7 @@ if (isset($_POST['atualizar'])) {
         <div class="pernome">
         <img src="user.png" alt="">
         <div class="nomeper">
-        <p>Nome do usuario</p>
+        <p>nome do usuario</p>
     </div>
     </div>
 

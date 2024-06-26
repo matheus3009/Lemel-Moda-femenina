@@ -24,7 +24,7 @@ $tipo = isset($_POST['tipo']) ? $_POST['tipo'] : null; // ou qualquer valor padr
 	inserirUsuario($conexao, $nome, $email, $tipo, $senha);
 
 	// Redirecionando para a lista de usuarios
-	header("location:perfil.html");
+	header("location:perfil.php");
 }
 ?>
 

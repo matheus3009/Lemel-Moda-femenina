@@ -14,8 +14,7 @@ if (isset($_GET['campos_obrigatorios'])) {
 	$mensagem = "Voce deve fazer o login";
 }
 
-$email = 'kaiju@8';
-$senha = '8';
+
 
 
 if (isset($_POST['entrar'])) {
@@ -31,11 +30,21 @@ if (isset($_POST['entrar'])) {
 
 	/*  1. Buscando no banco de dados, através do email digitado, se existe um usuário cadastrado. */
 	$usuario = buscarUsuario($conexao, $email);
+   
+
+/*     if(password_verify($senha, $usuario['senha'])){
+        echo "senha igual";
+    } else {
+        echo "senha diferente";
+    } */
+
+   /*  die(); */
 
 	/* 2. Verificação de usuario e senha
 	Se o usuario/email existe no banco e a senha digitada for igual a do banco...
 	*/
 	if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
+        /* die("aqui"); */
 		//Então inicie o processo de login.
 		login($usuario['id'], $usuario['nome'], $usuario['tipo']);
 
@@ -44,6 +53,7 @@ if (isset($_POST['entrar'])) {
 
 		exit;
 	} else {
+        die("tem erro login/senha");
 		//Senão, senha está errada e não pode entrar no sistema.
 		header("location:login.php?dados_incorretos");
 		exit;
