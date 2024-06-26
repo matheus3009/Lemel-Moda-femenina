@@ -1,49 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="h-100">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Microblog</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojas Lemel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column h-100">
-    
-<header id="topo" class="border-bottom sticky-top">
+<body>
+    <div class="menu-overlay"></div>
+    <header>
+        <div class="container">
+            <a href="#" class="menu"><img src="imagens/icones/barra-menu.png" alt="Menu de navegação"></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="fechar"><img src="imagens/icones/x.png" alt="Fechar menu"></a></li>
+                    <li><a href="novidades.html">Novidades</a></li>
+                    <li>
+                        <a href="#" class="toggle">Produtos</a>
+                        <ul class="submenu">
+                            <li><a href="#">Calças</a></li>
+                            <li><a href="#">Camisas</a></li>
+                            <li><a href="#">Vestidos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="oferta.html">Ofertas</a></li>
+                    <li>
+                        <a href="#" class="toggle">Outros</a>
+                        <ul class="submenu">
+                            <li><a href="#">Acesse a conta</a></li>
+                            <li><a href="#">Quem somos</a></li>
+                            <li><a href="#">Suporte</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="logo"><img src="imagens/icones/logo-lemel.png" alt="Logo da Lemel"></a>
+            <div class="icons">
+                <a href="javascript:void(0);" id="search-icon"><img src="imagens/icones/busca.png" alt="Ícone de busca"></a>
+                <a href="#sacola"><img src="imagens/icones/sacola.png" alt="Ícone de sacola"></a>
+                <a href="#conta"><img src="imagens/icones/conta.png" alt="Ícone de conta"></a>
+            </div>
+        </div>
+    </header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <h1 class="ms-n1"><a class="navbar-brand" href="index.php">Microblog</a></h1>
+    <div class="area-de-busca">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin/index.php"><i class="bi bi-lock-fill"></i> Área administrativa</a>
-        </li>
-      </ul>
-
-      <form autocomplete="off" class="d-flex" action="resultados.php" method="GET">
-        <input name="busca" class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Pesquise aqui">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">OK</button>
-      </form>
+        <div class="search-bar">
+            <a href="">
+                <img src="imagens/icones/busca.png" alt="Ícone de busca" class="search-icon">
+            </a>
+            <input type="text" name="search-bar" placeholder="Buscar produtos">
+        </div>
     </div>
-  </div>
-</nav>
-
-</header>
-
-<main class="flex-shrink-0">
-    <div class="container">
-
-    
