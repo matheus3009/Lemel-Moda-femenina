@@ -39,16 +39,32 @@
 </section>
 
 <!-- Produtos -->
-<section class="products">
-    <div class="product-item">
-        <img src="imagens/produtos/produto1-min.png" alt="Produto 1">
-        <p>Calça Creme</p>
-        <p>R$ 100,00</p>
-    </div>
-    <div class="product-item">
-        <img src="imagens/produtos/produto2-min.png" alt="Produto 2">
-        <p>Calça Cinza</p>
-        <p>R$ 100,00</p>
+<section>
+    <div class="products">
+        <div class="product-item">
+            <img class="product-img" src="imagens/produtos/calca-creme2.png" alt="Produto 1">
+            <div class="product-text">
+                <p>Calça Creme</p>
+                <p>R$ 100,00</p>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-img" src="imagens/produtos/calca-cinza1.png" alt="Produto 2">
+            <p>Calça Cinza</p>
+            <p>R$ 100,00</p>
+        </div>
+        <div class="product-item">
+            <img class="product-img" src="imagens/produtos/calca-cinza1.png" alt="Produto 2">
+            <p>Calça Cinza</p>
+            <p>R$ 100,00</p>
+        </div>
+        <div class="product-item">
+            <img class="product-img" src="imagens/produtos/calca-cinza1.png" alt="Produto 2">
+            <div> <p>Calça Cinza</p>
+            <p>R$ 100,00</p></div>
+           
+        </div>
+      
     </div>
 </section>
 
