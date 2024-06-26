@@ -1,14 +1,51 @@
-</div>
-</main>
-
-<footer class="footer mt-auto py-3 bg-light border-top">
-    <div class="container text-center">
-        Microblog é um site fictício desenvolvido para fins didáticos | Senac Penha &copy; 2024
-    </div>
-</footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-container">
+                <a href="#" class="logo">Footer</a>
+            </div>
+            <div class="footer-container">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">our stores</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">E-mail</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3>Get Help</h3>
+                <ul>
+                    <li><a href="#">Shopping</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">Pre-order</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">credit note</a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </body>
+    <script src="js/script.js"></script>
 </body>
 </html>
