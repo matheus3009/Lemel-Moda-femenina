@@ -250,8 +250,8 @@ nav ul li ul.submenu.show {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 20px;
-    padding-left: 10%;
- padding-right: 10%;
+    padding-left: 50px;
+ padding-right: 50px;
 }
 
 .category-item {
@@ -273,7 +273,7 @@ nav ul li ul.submenu.show {
    width: 100%; 
  */
  display: grid;
- gap: 10px;
+
  grid-template-columns: repeat(2, 1fr);
  padding-left: 5%;
  padding-right: 5%;
