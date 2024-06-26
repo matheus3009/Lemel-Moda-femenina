@@ -3,6 +3,7 @@
 
 html{
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 :root {
@@ -27,6 +28,7 @@ html{
 body {
     font-family: 'Montserrat', 'Ubuntu', sans-serif;
     background-color: var(--branco);
+    overflow-x: hidden;
 }
 
 
@@ -261,18 +263,42 @@ nav ul li ul.submenu.show {
 
 /* Produtos */
 .products {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+   /* display: flex;
+   flex-wrap: wrap;
+   margin: auto;
+   justify-content: center; 
+   align-items: center;
+   width: 100%; 
+ */
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 10px;
+ padding: 20px;
 }
 
 .product-item {
+  /*   text-align: center;
+    padding: 4px;
+    border:  1px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 2% auto;
+    width: 45%; */
+  
+    padding: 20px;
     text-align: center;
+    padding-bottom: 90%;
+
 }
 
-.product-item img {
-    width: 100px;
-    height: auto;
+
+.product-img {
+    background-color: gray;
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
