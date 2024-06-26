@@ -1,4 +1,5 @@
 <?php 
+require_once "inc/cabecalho.php";
 require "inc/funcoes-sessao.php";
 require "inc/funcoes-usuarios.php";
 
@@ -41,42 +42,16 @@ if (isset($_POST['atualizar'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/perfil.css">
     <title>Login</title>
+
+    <style>
+        img{
+            height: 200px;
+        }
+    </style>
     
 </head>
 <body>
-    <header>
-        <div class="container">
-            
-            <h1><a href="index.html"><img src="imagens/logo-lemel.png" alt="logo"></a>
-                </h1>
-            <nav >
-                        <h2><a href="">Menu &equiv;</a></h2>
-                        <ul class="links-menu">
-                            <li><a href="">Inicio</a></li>
-                            <li><a href="">Produtos</a></li>
-                            <li><a href="">Minha conta</a></li>
-                            <li><a href="">Favoritos</a></li>
-                            <li><a href="">Sacolas</a></li>
-                            <li><a href="">Quem somos</a></li>
-                            <li><a href="">Suporte</a></li>
-                        </ul>
-                    </nav>
-
-                    
-
-                  
-        </div>
-
-        <form action="resultados.html"><input type="search" id="site-pesquisa" name="q" />
-            <button>Search</button>
-        </form>
-        <h2><a href="login.php"><img src="" alt="">Login</a></h2>
-
-                    <h2><a href="sacola.html"><img src="" alt="">sacola</a></h2>
-
-    </header>
 
     <main>
         <h2>Perfil</h2>
@@ -96,54 +71,7 @@ if (isset($_POST['atualizar'])) {
 
     </main>
 
-	<footer>
-<div id="exemplo-flaxbox">
-	<div class="caixa">
-		<h2>Contato</h2>
-        <ul>
-            <li>Atentimento</li>
-            <li>Onde encontrar</li>
-            <li>Chat Online</li>
-            <li>SEE ON MAP</li>
-        </ul>
-	</div>
 
-
-
-	<div class="caixa">
-		<h2>Siga</h2>
-        <ul>
-            <li><a href="https://www.instagram.com/lemelmodaeacessorios?igsh=MTlzemhvcGx2cGM3Zw==">@lemelmodaeacessorios</a></li>
-            <li>SEE ON MAP</li>
-	</div>
-
-
-
-	<div class="caixa">
-		<img src="imagens/mini-microsoft.jpg" alt="">
-		<h2>FAQ</h2>
-		<ul>
-            <li>Frete & entrega</li>
-            <li>Garantia</li>
-            <li>Forma de pagamento</li>
-            <li>Troca & devolução</li>
-            <li>Segurança</li>
-            <li>Termos & condições</li>
-        </ul>
-	</div>
-
-    <div class="caixa">
-		<h2>Minha conta</h2>
-        <ul>
-            <li>Meus dados</li>
-            <li>Meus pedidos</li>
-            <li>Minhas trocas</li>
-            <li>Vale compras</li>
-        </ul>
-	</div>
-
-</div>
-</footer>
-
-</body>
-</html>
+<?php
+require_once "inc/rodape.php"
+?>
