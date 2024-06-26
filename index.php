@@ -55,7 +55,7 @@
         </div>
         <div class="product-item">
             <img class="product-img" src="imagens/produtos/calca-creme1-zoom.png" alt="Produto 2">
-            <p>Calça Cinza</p>
+            <p>Calça Creme</p>
             <p>R$ 100,00</p>
         </div>
         <div class="product-item">
