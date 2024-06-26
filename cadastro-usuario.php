@@ -177,5 +177,5 @@ $tipo = isset($_POST['tipo']) ? $_POST['tipo'] : null; // ou qualquer valor padr
         <p class="com"> <img class="fg" src="/imagens/google.png" alt=""> Entra com Google</p>
     </main>
 <?php 
-require_once"rodape.html"
+require_once "rodape.php"
 ?>
