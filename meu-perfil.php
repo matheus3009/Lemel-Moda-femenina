@@ -1,6 +1,6 @@
 <?php 
-require_once "../inc/cabecalho-admin.php";
-require_once "../inc/funcoes-usuarios.php";
+
+require "../inc/funcoes-usuarios.php";
 
 // 1) Carregue as funções de usuários
 // 2) Pegue o ID do usuário através da SESSÃO

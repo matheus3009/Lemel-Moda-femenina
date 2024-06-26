@@ -14,6 +14,8 @@ require "inc/funcoes-usuarios.php";
 // 5) DESAFIO: faça com que, ao mudar o nome do usuário, automaticamente apareça o novo nome na index.php
 
 $idUsuario = 2;
+$email = 'kaiju@8';
+$senha = '8';
 
 $perfil = lerUmUsuario($conexao, $idUsuario);
 
