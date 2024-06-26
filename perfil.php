@@ -83,8 +83,7 @@ if (isset($_POST['atualizar'])) {
         <div class="pernome">
         <img src="user.png" alt="">
         <div class="nomeper">
-        <p><?=$_SESSION['name']?></p>
-        <p>Nome da conta</p>
+        <p>Nome do usuario</p>
     </div>
     </div>
 

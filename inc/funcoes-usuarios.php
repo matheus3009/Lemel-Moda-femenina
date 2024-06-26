@@ -32,7 +32,7 @@ function lerUmUsuario($conexao, $id){
 }
 
 function atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo){
-    $sql = "UPDATE clientes SET 
+    $sql = "UPDATE usuarios SET 
     nome = '$nome',
     email = '$email',
     senha = '$senha',
@@ -46,7 +46,7 @@ function excluirUsuario($conexao, $id){
   
     
       // Monta a consulta SQL para excluir o usuário
-      $sql = "DELETE FROM clientes WHERE id = $id";
+      $sql = "DELETE FROM usuarios WHERE id = $id";
     
       // Executa a consulta no banco de dados
       mysqli_query($conexao, $sql) or die(mysqli_error($conexao));

@@ -12,7 +12,7 @@ if (isset($_POST['inserir'])) {
     $preco = htmlspecialchars($_POST['preco']);
 
     /* Obtendo o id do usuário que esta logado e inserindo a noticia. Portanto, a notícia será associada ao usuário devido ao uso de chave estrageira e relacionamento no banco. */
-    $usuarioId = 2;
+    $usuarioId = 3;
     /* Captura dados de arquivos enviados */
     $imagem = $_FILES['imagem'];
 

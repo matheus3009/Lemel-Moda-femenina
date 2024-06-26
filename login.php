@@ -14,6 +14,8 @@ if (isset($_GET['campos_obrigatorios'])) {
 	$mensagem = "Voce deve fazer o login";
 }
 
+$email = 'kaiju@8';
+$senha = '8';
 
 
 if (isset($_POST['entrar'])) {
@@ -38,7 +40,7 @@ if (isset($_POST['entrar'])) {
 		login($usuario['id'], $usuario['nome'], $usuario['tipo']);
 
 		// Redirecione para a index admin
-		header("location:perfil.html");
+		header("location:perfil.php");
 
 		exit;
 	} else {
