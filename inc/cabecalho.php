@@ -34,7 +34,7 @@
                     </li>
                 </ul>
             </nav>
-            <a href="#" class="logo"><img src="imagens/icones/logo-lemel.png" alt="Logo da Lemel"></a>
+            <a href="index.php" class="logo"><img src="imagens/icones/logo-lemel.png" alt="Logo da Lemel"></a>
             <div class="icons">
                 <a href="javascript:void(0);" id="search-icon"><img src="imagens/icones/busca.png" alt="Ícone de busca"></a>
                 <a href="#sacola"><img src="imagens/icones/sacola.png" alt="Ícone de sacola"></a>

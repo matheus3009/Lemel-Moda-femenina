@@ -412,6 +412,7 @@ nav ul li ul.submenu.show {
         width: 90%; 
         padding: 15px 5px; 
         font-size: 14px; 
+        text-align: center;
       }
     }
 
