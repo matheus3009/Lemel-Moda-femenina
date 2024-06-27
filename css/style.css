@@ -408,10 +408,11 @@ nav ul li ul.submenu.show {
        height: 40vh;
      }
 
-     .footer-container{
-        width: 50%; 
-        padding: 20px 0px;
-    }
+     .footer-container {
+        width: 90%; 
+        padding: 15px 5px; 
+        font-size: 14px; 
+      }
     }
 
 

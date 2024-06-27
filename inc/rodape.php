@@ -1,25 +1,25 @@
     <footer class="footer">
         <div class="wrap">
             <div class="footer-container">
-                <a href="#" class="logo">Footer</a>
+                <a href="#" class="logo">Lojas Lemel</a>
             </div>
             <div class="footer-container">
-                <h3>Company</h3>
+                <h3>Empresa</h3>
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">our stores</a></li>
-                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Nossa Historia</a></li>
+                    <li><a href="#">Telefone</a></li>
                     <li><a href="#">E-mail</a></li>
                     <li></li>
                 </ul>
             </div>
             <div class="footer-container">
-                <h3>Get Help</h3>
+                <h3>Precisa de ajuda?</h3>
                 <ul>
                     <li><a href="#">Shopping</a></li>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Payment</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Entrega</a></li>
+                    <li><a href="#">pagamento</a></li>
+                    <li><a href="#">Entre em contato</a></li>
                     <li></li>
                 </ul>
             </div>
@@ -28,19 +28,18 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shop</a></li>
-                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">Promoções</a></li>
                     <li><a href="#">Pre-order</a></li>
                     <li></li>
                 </ul>
             </div>
             <div class="footer-container">
-                <h3>Account</h3>
+                <h3>Conta</h3>
                 <ul>
-                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Conta</a></li>
                     <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">credit note</a></li>
-                    <li></li>
+                    <li><a href="#">Registro</a></li>
+                    <li><a href="#">cumpom fiscal</a></li>
                 </ul>
             </div>
         </div>
