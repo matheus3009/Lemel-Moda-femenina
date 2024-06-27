@@ -38,7 +38,7 @@
             <div class="icons">
                 <a href="javascript:void(0);" id="search-icon"><img src="imagens/icones/busca.png" alt="Ícone de busca"></a>
                 <a href="#sacola"><img src="imagens/icones/sacola.png" alt="Ícone de sacola"></a>
-                <a href="#conta"><img src="imagens/icones/conta.png" alt="Ícone de conta"></a>
+                <a href="perfil.php"><img src="imagens/icones/conta.png" alt="Ícone de conta"></a>
             </div>
         </div>
     </header>
